@@ -1,0 +1,11 @@
+*.swp
+*.gem
+.tags
+/.vscode
+/.idea
+
+*.pyc
+
+\.jekyll-cache/
+
+node_modules
