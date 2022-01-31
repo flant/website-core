@@ -1,0 +1,146 @@
+.benefits {
+  &__section {
+    padding-bottom: rem(130px);
+    position: relative;
+  }
+
+  &__wrap {
+    position: relative;
+  }
+
+  &__lines {
+    position: absolute;
+    top: 100px;
+    right: -500px;
+    z-index: -1;
+
+    @include old-display {
+      display: none;
+    }
+  }
+
+  &__title {
+    // padding-bottom: rem(90px);
+    padding-bottom: rem(35px);
+  }
+
+  &__grid--list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-gap: rem(100px);
+    grid-template-areas: 
+      "gear ."
+      "gear people"
+      "shield people"
+      "shield comp";
+
+      @include laptop {
+        gap: rem(50px);
+      }
+
+      @include tablets {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+          "gear"
+          "people"
+          "shield"
+          "comp";
+      }
+
+    & .card {
+      // padding: rem(60px) rem(40px);
+      padding: rem(40px) rem(60px);
+      background: #fff;
+      border-radius: rem(20px);
+
+      // @media (min-width: 769px) and (max-width: 960px) {
+      //   padding-left: 34px;
+      //   padding-right: 34px;
+      // }
+
+      @include phones {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      &--gear {
+        grid-area: gear;
+      }
+
+      &--people {
+        grid-area: people;
+      }
+
+      &--shield {
+        grid-area: shield;
+      }
+
+      &--comp {
+        grid-area: comp;
+      }
+
+      &__pic {
+        width: rem(57px);
+        height: rem(59px);
+        fill: none;
+        padding-bottom: rem(20px);
+        // stroke: $color-accent;
+      }
+
+      &__title {
+        padding-bottom: rem(20px);
+      }
+
+      & p {
+        @include montserrat(regular);
+        font-size: rem(18px);
+        line-height: rem(26px);
+        color: $text-color;
+
+        & a {
+          @include montserrat(regular-italic);
+          text-decoration: underline;
+          color: $text-color-accent;
+        }
+      }
+
+      &--shield p {
+        padding-bottom: rem(30px);
+      }
+    }
+  }
+}
+
+.card__item {
+  font-size: rem(14px);
+  line-height: rem(20px);
+  color: $text-color;
+  padding-bottom: rem(30px);
+  padding-left: rem(30px);
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: rem(10px);
+    height: rem(10px);
+    border-radius: 50%;
+    background: $color-bullets;
+    margin-left: rem(-30px);
+    margin-right: rem(20px);
+  }
+
+  &--no-bul {
+    & a {
+      @include montserrat(regular-italic);
+      font-size: rem(14px);
+      line-height: rem(17px);
+      color: $text-color-accent;
+      text-decoration: underline;
+    }
+
+    &::before {
+      visibility: hidden;
+    }
+  }
+}
