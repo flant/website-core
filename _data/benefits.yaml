@@ -1,0 +1,45 @@
+benefits_group1:
+  title:
+    en: Benefits Title
+    ru: Заголовок фич
+  image: /images/benefits/benefit1-title.svg
+  items:
+    - title:
+        en: Item 1
+        ru: Элемент 1
+      image: /images/benefits/benefit1-item1.svg
+      content:
+        en: |
+          <b>Lorem Ipsum</b> is simply dummy text of the printing and typesetting industry. 
+          
+          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        ru: |
+          <b>Съешь</b> еще этих мягких французских булочек. 
+          
+          Съешь еще этих мягких французских булочек. Съешь еще этих мягких французских булочек. Съешь еще этих мягких французских булочек. Съешь еще этих мягких французских булочек. Съешь еще этих мягких французских булочек. Съешь еще этих мягких французских булочек.
+    - title:
+        en: Item 2
+        ru: Элемент 2
+      image: /images/benefits/benefit1-item2.svg
+      content:
+        en: |
+          <b>Lorem Ipsum</b> is simply dummy text of the printing and typesetting industry. 
+          
+          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        ru: |
+          <b>Съешь</b> еще этих мягких французских булочек. 
+          
+          Съешь еще этих мягких французских булочек. Съешь еще этих мягких французских булочек. Съешь еще этих мягких французских булочек. Съешь еще этих мягких французских булочек. Съешь еще этих мягких французских булочек. Съешь еще этих мягких французских булочек.
+    - title:
+        en: Item 3
+        ru: Элемент 3
+      image: /images/benefits/benefit1-item3.svg
+      content:
+        en: |
+          <b>Lorem Ipsum</b> is simply dummy text of the printing and typesetting industry. 
+          
+          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        ru: |
+          <b>Съешь</b> еще этих мягких французских булочек. 
+          
+          Съешь еще этих мягких французских булочек. Съешь еще этих мягких французских булочек. Съешь еще этих мягких французских булочек. Съешь еще этих мягких французских булочек. Съешь еще этих мягких французских булочек. Съешь еще этих мягких французских булочек. 

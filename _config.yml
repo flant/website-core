@@ -1,0 +1,60 @@
+topnav_title: Flant Theme
+site_title: Flant Theme
+company_url:
+  ru: https://flant.ru
+  en: https://flant.com
+company_name:
+  ru: Флант
+  en: Flant
+site_lang: en
+site_urls:
+  ru: theme.flant.com
+  en: theme.flant.com
+logo_url: /assets/images/logo.svg#eng-logo
+site_description: Flant Jekyll Theme
+github_repo_path: /flant/website-core
+
+exclude:
+- .gitignore
+- Gemfile
+- Gemfile.lock
+- werf.yaml
+- pages_ru/
+
+highlighter: rouge
+
+plugins:
+- jekyll-assets
+
+markdown: kramdown
+kramdown:
+ input: GFM
+ hard_wrap: false
+ syntax_highlighter: rouge
+
+breadcrumbs:
+  root:
+    hide: false  # show breadcrumbs on root/home page
+    image: false # Show image or title text
+  hometext: "Home"
+
+collections:
+  tooltips:
+    output: false
+
+theme:  flant-theme
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+      search: true
+      sidebar: false
+      topnav: topnav
+      lang: en
+      sitemap_include: true
+
+timezone: Etc/GMT-3
+output: web

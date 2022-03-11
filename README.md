@@ -1,3 +1,10 @@
-# Flant websites core data
+# Flant theme for websites
 
-This repository contains core data for a couple of Flant sites.
+This repository contains Jekyll theme with data for a couple of Flant sites.
+
+## How to test
+
+```shell
+bundle install
+bundle exec jekyll serve
+```

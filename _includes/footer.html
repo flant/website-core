@@ -1,0 +1,34 @@
+<footer class="footer footer__section">
+  <div class="container">
+    <div class="footer__wrap">
+      <div class="footer__text">
+        <span>{%- if site.site_lang == "ru" %}Сделано с{% else %}Made with{%- endif %}</span>
+        <svg class="footer__heart">
+          <use xlink:href="{% asset icons/sprite.svg @path %}#heart"></use>
+        </svg>
+        {%- if site.site_lang == "ru" %}
+          <span>в компании <a href="{{ site.company_url[site.site_lang] }}" target="_blank">{{ site.company_name[site.site_lang] }}</a></span>
+        {%- else %}
+          <span>by <a href="{{ site.company_url[site.site_lang] }}" target="_blank">{{ site.company_name[site.site_lang] }}</a></span>
+        {%- endif %}
+      </div>
+      {%- if site.show_github_stars %}
+      <div class="footer__github">
+        <span class="page__icon page__icon_github footer__github-icon"></span>
+        <a href="https://github.com{{ site.github_repo_path }}" class="footer__github-counter">
+          <span class="footer__github-counter-num"><span class="gh_counter">0</span></span>
+        </a>
+      </div>
+      {%- endif %}
+    </div>
+    {%- if site.show_site_generation_time %}
+    <div class="footer__gen" id="siteGenerationTime" hidden>
+      {%- if site.site_lang == "ru" %}
+      Дата генерации сайта: {{ site.time | date: "%e.%m.%Y, %H:%M %z"  }}
+      {%- else %}
+      Site last generated: {{ site.time | date: "%b %-d, %Y at %H:%M %z"  }}
+      {%- endif %}
+    </div>
+    {%- endif %}
+  </div>
+</footer>
