@@ -1,0 +1,26 @@
+logo: logo.svg
+navigation:
+  menu:
+    - item:
+      title: Безопасность
+      link: "https://trdl.dev/security.html"
+    - item:
+      title: Быстрый старт
+      link: "https://trdl.dev/quickstart.html"
+    - item:
+      title: Справка
+      link: "https://trdl.dev/reference/cli/overview.html"
+    - item:
+      title: GitHub
+      link: "https://github.com/werf/trdl"
+  icons:
+    - icon:
+      pic: telegram.svg
+      link: "https://t.me/werf_io"
+    - icon:
+      pic: vk.svg
+      link: "https://vk.com/flant_ru"
+lang:
+  en: English
+  ru: Русский
+search: true
