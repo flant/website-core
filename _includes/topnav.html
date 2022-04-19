@@ -127,6 +127,15 @@
     </div>
   </div>
 </header>
+<section style="margin-top: 70px">
+    <div class="container">
+        {% if page.lang == 'en' %}
+            {% include blocks/header.liquid data=site.data.en.header %}
+        {% else %}
+            {% include blocks/header.liquid data=site.data.ru.header %}
+        {% endif %}
+    </div>
+</section>
 
 <!-- <div class="header-dummy"></div>
 <div class="topsearch">

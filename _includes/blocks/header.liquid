@@ -1,0 +1,68 @@
+{%- assign data=include.data %}
+
+{%- unless data %}
+{%- assign err_msg = "empty data" %}
+{{- err_msg | raise_error }}
+{%- endunless %}
+
+<div class="header__wrap">
+    <div class="header__logo">
+        <a data-proofer-ignore href="/">
+            <img src='{{ assets[data.logo].digest_path }}' alt="">
+        </a>
+    </div>
+
+    <div class="header__menu">
+        <ul class="header__menu--list">
+            {% for item in data.navigation.menu %}
+                <li class="header__menu--item submenu-parent">
+                    <a href="{{ item.link }}">
+                        {{ item.title }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="language-switcher">
+        <ul class="language-switcher__list">
+            <li class="header__menu--item header__menu--item_parent submenu-parent lang">
+                <a href="#">
+                    {{ data.lang[page.lang] }}
+                </a>
+                <div class="submenu-container">
+                    <ul class="submenu">
+                        {% for item in data.lang %}
+                            {% assign lang = item[0] %}
+                            <li data-proofer-ignore class="submenu-item">
+                                <a data-proofer-ignore href="https://{{ site.site_urls[lang] }}{{ page.url }}" class="submenu-item-link">
+                                    {{ data.lang[lang] }}
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    {%- if data.navigation.icons %}
+        <div class="social-icons">
+            <ul class="icons__list">
+                {% for item in data.navigation.icons %}
+                    <li class="icons__item">
+                        <a href="{{ item.link }}">
+                            <img src='{{ assets[item.pic].digest_path }}' alt="" style="width: 20px; height: 20px;">
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    {%- endif %}
+
+    {%- if data.search %}
+        <div class="search__wrap">
+            <div class="search">{{ data.search }}</div>
+        </div>
+    {% endif %}
+</div>
