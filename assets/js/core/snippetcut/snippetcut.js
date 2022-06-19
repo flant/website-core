@@ -21,7 +21,7 @@ function btnHandler(button, selector) {
         navigator.clipboard.writeText(`${text}`)
             .then(() => {
                 // Успех!
-                button.innerHTML = 'Text copied';
+                button.innerHTML = selector === '[data-snippetcut-text]' ? 'Text copied' : 'Filename copied';
                 button.style.cssText = 'border-color: #28a745; color: #28a745';
 
                 setTimeout(()=> {
