@@ -1,12 +1,7 @@
 ---
-title: Flant Jeyll theme demo page
+title: Flant Jekyll theme demo page
 permalink: /
 ---
-
-### Benefits
-
-{% include blocks/benefits.liquid data=site.data.benefits.benefits_group1 %}
-
 ### Code snippets
 
 ```shell
@@ -29,5 +24,13 @@ deckhouse:
           - SystemLoad
     certManagerEnabled: true
     deckhouseWebEnabled: true
+```
+{% endsnippetcut %}
+
+{% snippetcut selector="example2" name="1.js" url="#" %}
+```javascript
+function Log() {
+    console.log(12345);
+}
 ```
 {% endsnippetcut %}
