@@ -26,6 +26,9 @@ module Jekyll
           .gsub(%r!\\\{\\\{|\\\{\\%!, '\{\{' => "{{", '\{\%' => "{%")
           .strip
 
+        site = context.registers[:site]
+        lang = context.registers[:page]['lang']
+
         override_config(@@DEFAULTS)
 
         params = @markup.scan /([a-z]+)\=\"(.+?)\"/
@@ -43,8 +46,8 @@ module Jekyll
         %Q(
 <div class="snippetcut#{@config[:limited] ? ' snippetcut_limited' : ''}" data-snippetcut>
 <div class="snippetcut__title">#{if (@config[:url]!='#') then "<a href=\""+@config[:url]+"\" target=\"_blank\" class=\"snippetcut__title-name\" data-snippetcut-name>" else "<span class=\"snippetcut__title-name-text\" data-snippetcut-name>" end}#{@config[:name]}#{if (@config[:url]!='#') then "</a>" else "</span>" end}
-<a href="javascript:void(0)" class="snippetcut__title-btn" data-snippetcut-btn-name>копировать имя</a>
-<a href="javascript:void(0)" class="snippetcut__title-btn" data-snippetcut-btn-text>копировать текст</a>
+<a href="javascript:void(0)" class="snippetcut__title-btn" data-snippetcut-btn-name>#{ site.data.dig('i18n', 'copy_filename', lang) ? site.data['i18n']['copy_filename'][lang] : site.data['global']['i18n']['copy_filename'][lang].capitalize }</a>
+<a href="javascript:void(0)" class="snippetcut__title-btn" data-snippetcut-btn-text>#{ site.data.dig('i18n', 'copy_content', lang) ? site.data['i18n']['copy_content'][lang] : site.data['global']['i18n']['copy_content'][lang].capitalize }</a>
 </div>
 <div class="highlight">
 #{rendered_content}
