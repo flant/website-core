@@ -1,6 +1,6 @@
 require "liquid"
 
-module Jekyll
+module JekyllFlantPlugins
   module SnippetCut
     class SnippetCutTag < Liquid::Block
       @@DEFAULTS = {
@@ -69,5 +69,3 @@ module Jekyll
     end
   end
 end
-
-Liquid::Template.register_tag('snippetcut', Jekyll::SnippetCut::SnippetCutTag)

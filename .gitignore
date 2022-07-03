@@ -1,6 +1,7 @@
 *.swp
 *.gem
 .tags
+.bundle
 /.vscode
 /.idea
 

@@ -15,6 +15,13 @@ GIT
       sassc (>= 1.11, < 3.0)
       sprockets (~> 4.0.beta7)
 
+PATH
+  remote: _gems/jekyll-flant-plugins
+  specs:
+    jekyll-flant-plugins (0.1.0)
+      jekyll (>= 4.0, < 5.0)
+      liquid (~> 4.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -112,6 +119,7 @@ PLATFORMS
 DEPENDENCIES
   jekyll (>= 4.2.1)
   jekyll-assets (= 4.0.0.alpha.pre.theme.0)!
+  jekyll-flant-plugins!
   kramdown (>= 2.3.0)
   kramdown-parser-gfm
   nokogiri (>= 1.10.8)
