@@ -42,7 +42,7 @@ collections:
   tooltips:
     output: false
 
-theme:  flant-theme
+#theme:  flant-theme
 
 defaults:
   - scope:
