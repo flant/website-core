@@ -7,6 +7,9 @@ group :jekyll_plugins do
   gem "jekyll-flant-theme", :path => './_gems/jekyll-flant-theme'
 end
 
+gem "jekyll-flant-plugins", :path => './_gems/jekyll-flant-plugins', group: :jekyll_plugins
+
+
 gem "jekyll", ">= 4.2.1"
 gem "kramdown-parser-gfm"
 
