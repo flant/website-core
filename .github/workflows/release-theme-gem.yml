@@ -13,13 +13,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-        if: ${{ steps.release.outputs.release_created }}
 
       - name: Set up Ruby 2.7
         uses: actions/setup-ruby@v1
         with:
           ruby-version: 2.7.x
-        if: ${{ steps.release.outputs.release_created }}
 
       - name: Publish to RubyGems
         run: |
@@ -32,4 +30,3 @@ jobs:
           gem push *.gem
         env:
           GEM_HOST_API_KEY: "${{secrets.RUBYGEMS_AUTH_TOKEN}}"
-        if: ${{ steps.release.outputs.release_created }}
