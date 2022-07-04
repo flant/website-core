@@ -1,12 +1,14 @@
 *.swp
 *.gem
 .tags
+.bundle
 /.vscode
 /.idea
 
 *.pyc
 
 \.jekyll-cache/
+\.sass-cache
 _site
 
 node_modules

@@ -1,0 +1,16 @@
+copied_to_clipboard:
+  en: Has been copied to clipboard
+  ru: Скопировано в буфер обмена
+  de: In die Zwischenablage kopiert
+copy_name:
+  en: Copy name
+  ru: Скопировать имя
+copy_filename:
+  en: Copy filename
+  ru: Скопировать имя файла
+copy_content:
+  en: Copy content
+  ru: Скопировать содержимое
+soon:
+  en: "soon..."
+  ru: "скоро..."

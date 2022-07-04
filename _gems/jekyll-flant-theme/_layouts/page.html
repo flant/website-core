@@ -1,0 +1,16 @@
+---
+layout: sidebar
+---
+
+<div class="docs">
+    {% unless page.without_auto_heading %}
+    <h1 class="docs__title">{{ page.title }}</h1>
+    {% endunless %}
+
+    <div class="post-content">
+
+        {{content}}
+
+    </div>
+
+</div>
