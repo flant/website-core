@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require_relative "lib/jekyll-flant-plugins/version"
 
 Gem::Specification.new do |spec|
@@ -6,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.authors = ["Artem Kladov"]
   spec.email = ["artem.kladov@flant.com"]
 
-  spec.summary = "The Jekyll Plugins for using on the Flant Europe (flant.com) sites"
+  spec.summary = "The Jekyll Plugins for using on the Flant Europe (flant.com) sites."
   spec.homepage = "https://github.com/flant/website-core"
   spec.license = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.7.0")
@@ -17,6 +18,6 @@ Gem::Specification.new do |spec|
   spec.files = Dir["lib/**/*.rb"]
   spec.require_paths = ["lib"]
 
-  spec.add_runtime_dependency "jekyll", ">= 4.0", "< 5.0"
+  spec.add_runtime_dependency "jekyll", "~> 4.2"
   spec.add_runtime_dependency "liquid", "~> 4.0"
 end

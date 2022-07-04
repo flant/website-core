@@ -19,8 +19,14 @@ PATH
   remote: _gems/jekyll-flant-plugins
   specs:
     jekyll-flant-plugins (0.1.0)
-      jekyll (>= 4.0, < 5.0)
+      jekyll (~> 4.2)
       liquid (~> 4.0)
+
+PATH
+  remote: _gems/jekyll-flant-theme
+  specs:
+    jekyll-flant-theme (0.1.1)
+      jekyll (~> 4.2)
 
 GEM
   remote: https://rubygems.org/
@@ -83,7 +89,7 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.4.0)
     mini_portile2 (2.8.0)
-    minitest (5.16.1)
+    minitest (5.16.2)
     nokogiri (1.13.6)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
@@ -120,6 +126,7 @@ DEPENDENCIES
   jekyll (>= 4.2.1)
   jekyll-assets (= 4.0.0.alpha.pre.theme.0)!
   jekyll-flant-plugins!
+  jekyll-flant-theme!
   kramdown (>= 2.3.0)
   kramdown-parser-gfm
   nokogiri (>= 1.10.8)
