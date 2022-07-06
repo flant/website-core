@@ -17,26 +17,31 @@ function btnHandler(button, selector) {
         const parent = e.target.closest('.snippetcut');
         const text = parent.querySelector(selector).innerText;
         const oldText = button.innerText;
+        const lang = document.documentElement.lang;
 
         navigator.clipboard.writeText(`${text}`)
             .then(() => {
                 // Успех!
-                button.innerHTML = selector === '[data-snippetcut-text]' ? 'Text copied' : 'Filename copied';
-                button.style.cssText = 'border-color: #28a745; color: #28a745';
+                if (selector === '[data-snippetcut-text]') {
+                    button.innerHTML = dataGlobalI18n.snippetcut.messages.content_copied[lang];
+                } else {
+                    button.innerHTML = dataGlobalI18n.snippetcut.messages.filename_copied[lang];
+                }
+                button.classList.add('button__success');
 
                 setTimeout(()=> {
                     button.innerHTML = oldText;
-                    button.removeAttribute('style');
+                    button.classList.remove('button__success');
                 }, 2000);
             })
             .catch(() => {
                 // Неудача :(
-                button.innerHTML = 'Something went wrong';
-                button.style.cssText = 'border-color: #dc3545; color: #dc3545';
+                button.innerHTML = dataGlobalI18n.snippetcut.messages.something_went_wrong[lang];
+                button.classList.add('button__danger');
 
                 setTimeout(()=> {
                     button.innerHTML = oldText;
-                    button.removeAttribute('style');
+                    button.classList.remove('button__danger');
                 }, 2000);
             });
     });
