@@ -2,6 +2,7 @@
 title: Flant Jekyll theme demo page
 permalink: /
 ---
+
 ### Code snippets
 
 ```shell
