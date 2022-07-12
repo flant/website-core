@@ -16,7 +16,7 @@ jobs:
         id: release
         with:
           release-type: simple
-          package-name: Flant Website Core
+          package-name: website-core
           bump-minor-pre-major: true
           version-file: "version.txt"
 
