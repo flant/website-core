@@ -18,8 +18,7 @@ exclude:
 - .gitignore
 - Gemfile
 - Gemfile.lock
-- werf.yaml
-- pages_ru/
+- version.txt
 
 highlighter: rouge
 
