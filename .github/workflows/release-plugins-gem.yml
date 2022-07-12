@@ -1,32 +1,58 @@
-name: Release jekyll-flant-plugins Gem
+name: Release Gems
 
 on:
   push:
     branches:
       - main
     paths:
-      - '_gems/jekyll-flant-plugins/**'
+      - '_gems/**'
 jobs:
   build:
     name: Build, Publish and Release
     runs-on: ubuntu-latest
 
     steps:
+      - uses: GoogleCloudPlatform/release-please-action@v3
+        id: release
+        with:
+          release-type: simple
+          package-name: Flant Website Core
+          bump-minor-pre-major: true
+          version-file: "version.txt"
+
       - uses: actions/checkout@v2
+        if: ${{ steps.release.outputs.release_created }}
 
       - name: Set up Ruby 2.7
         uses: actions/setup-ruby@v1
         with:
           ruby-version: 2.7.x
+        if: ${{ steps.release.outputs.release_created }}
 
-      - name: Publish to RubyGems
+      - name: Update GEMs version
+        run: |
+          sed -i 's/#SEMVER/${{ steps.release.outputs.major }}/' _gems/jekyll-flant-plugins/lib/jekyll-flant-plugins/version.rb
+          cat _gems/jekyll-flant-plugins/lib/jekyll-flant-plugins/version.rb 
+          sed -i 's/#SEMVER/${{ steps.release.outputs.major }}/' _gems/jekyll-flant-theme/jekyll-flant-theme.gemspec
+          cat _gems/jekyll-flant-theme/jekyll-flant-theme.gemspec
+        if: ${{ steps.release.outputs.release_created }}
+
+      - name: Preparing for publishing to RubyGems
         run: |
           mkdir -p $HOME/.gem
           touch $HOME/.gem/credentials
           chmod 0600 $HOME/.gem/credentials
           printf -- "---\n:rubygems_api_key: ${GEM_HOST_API_KEY}\n" > $HOME/.gem/credentials
+        env:
+          GEM_HOST_API_KEY: "${{secrets.RUBYGEMS_AUTH_TOKEN}}"
+        if: ${{ steps.release.outputs.release_created }}
+
+      - name: Publish Gems to RubyGems
+        run: |
           cd _gems/jekyll-flant-plugins/
           gem build *.gemspec
           gem push *.gem
-        env:
-          GEM_HOST_API_KEY: "${{secrets.RUBYGEMS_AUTH_TOKEN}}"
+          cd _gems/jekyll-flant-theme/
+          gem build *.gemspec
+          gem push *.gem
+        if: ${{ steps.release.outputs.release_created }}
