@@ -51,7 +51,7 @@ jobs:
           cd _gems/jekyll-flant-plugins/
           gem build *.gemspec
           gem push *.gem
-          cd _gems/jekyll-flant-theme/
+          cd ../jekyll-flant-theme/
           gem build *.gemspec
           gem push *.gem
         if: ${{ steps.release.outputs.release_created }}
