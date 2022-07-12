@@ -21,7 +21,7 @@ function btnHandler(button, selector) {
 
         navigator.clipboard.writeText(`${text}`)
             .then(() => {
-                // Успех!
+                // Success!
                 if (selector === '[data-snippetcut-text]') {
                     button.innerHTML = dataGlobalI18n.snippetcut.messages.content_copied[lang];
                 } else {
@@ -35,7 +35,7 @@ function btnHandler(button, selector) {
                 }, 2000);
             })
             .catch(() => {
-                // Неудача :(
+                // Fail :(
                 button.innerHTML = dataGlobalI18n.snippetcut.messages.something_went_wrong[lang];
                 button.classList.add('button__danger');
 
