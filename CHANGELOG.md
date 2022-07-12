@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.0.2](https://github.com/flant/website-core/compare/v1.0.1...v1.0.2) (2022-07-12)
+
+
+### Bug Fixes
+
+* update license ([#8](https://github.com/flant/website-core/issues/8)) ([1cf09b2](https://github.com/flant/website-core/commit/1cf09b2faa1afd83b1a50b0e9f49d9de470315bb))
+
+## [1.0.1](https://github.com/flant/website-core/compare/v1.0.0...v1.0.1) (2022-07-12)
+
+
+### Bug Fixes
+
+* update CI ([ee31f9a](https://github.com/flant/website-core/commit/ee31f9a87109f59f7742bb67c024fd3ea09c7cb1))
+* update CI ([9578f87](https://github.com/flant/website-core/commit/9578f876d5b092c333f0858308e0240e2652b818))
+
 ## 1.0.0 (2022-07-12)
 
 
