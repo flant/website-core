@@ -4,8 +4,7 @@ on:
   push:
     branches:
       - main
-    paths:
-      - '_gems/**'
+
 jobs:
   build:
     name: Build, Publish and Release
