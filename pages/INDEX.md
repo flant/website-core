@@ -28,10 +28,12 @@ deckhouse:
 ```
 {% endsnippetcut %}
 
-{% snippetcut selector="example2" name="1.js" url="#" %}
-```javascript
-function Log() {
-    console.log(12345);
-}
-```
-{% endsnippetcut %}
+
+<div class="trdl-configuration-table">
+    <table aria-hidden=true>
+        {{ "tableLineCounter" | reset_shared_counter }}
+        {% for directive in site.data.test.directives %}
+        {% include configuration_table_directive.html directive=directive %}
+        {% endfor %}
+    </table>
+</div>
