@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.4](https://github.com/flant/website-core/compare/v1.0.3...v1.0.4) (2022-07-13)
+
+
+### Bug Fixes
+
+* update snippetcut plugin ([1b181cc](https://github.com/flant/website-core/commit/1b181cc1d427a0af1a3d2a0ce3a895aa9da79806))
+
 ## [1.0.3](https://github.com/flant/website-core/compare/v1.0.2...v1.0.3) (2022-07-12)
 
 
