@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.5](https://github.com/flant/website-core/compare/v1.0.4...v1.0.5) (2022-07-13)
+
+
+### Bug Fixes
+
+* change semver placeholder for gems to allow local development ([c53e206](https://github.com/flant/website-core/commit/c53e20662f941ba989254d1b8b24ffadfe3adff3))
+
 ## [1.0.4](https://github.com/flant/website-core/compare/v1.0.3...v1.0.4) (2022-07-13)
 
 
