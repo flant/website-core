@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-flant-theme"
-  spec.version       = "#SEMVER"
+  spec.version       = "0.0.1-SEMVER-PLACEHOLDER"
   spec.authors       = ["Artem Kladov"]
   spec.email         = ["artem.kladov@flant.com"]
 

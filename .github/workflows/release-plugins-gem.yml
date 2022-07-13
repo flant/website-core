@@ -31,9 +31,9 @@ jobs:
       - name: Update GEMs version
         run: |
           GEM_VERSION=`cat version.txt`
-          sed -i "s/#SEMVER/${GEM_VERSION}/" _gems/jekyll-flant-plugins/lib/jekyll-flant-plugins/version.rb
+          sed -i "s/0\.0\.1-SEMVER-PLACEHOLDER/${GEM_VERSION}/" _gems/jekyll-flant-plugins/lib/jekyll-flant-plugins/version.rb
           cat _gems/jekyll-flant-plugins/lib/jekyll-flant-plugins/version.rb 
-          sed -i "s/#SEMVER/${GEM_VERSION}/" _gems/jekyll-flant-theme/jekyll-flant-theme.gemspec
+          sed -i "s/0\.0\.1-SEMVER-PLACEHOLDER/${GEM_VERSION}/" _gems/jekyll-flant-theme/jekyll-flant-theme.gemspec
           cat _gems/jekyll-flant-theme/jekyll-flant-theme.gemspec
         if: ${{ steps.release.outputs.release_created }}
 
